@@ -36,7 +36,7 @@ function ogp_generator($title,$user){
     // title
     imagettftextposition($image,40,0,'center','center',$color,$font,$title_lines,'center');
     // user
-    imagettftextposition($image,30,0,180,540,$color,$font,$user,'right','right');
+    imagettftextposition($image,30,0,180,540,$color,$font,'@' . $user,'right','right');
 
     imagejpeg($image, $afjpg, 100);
 }
@@ -159,6 +159,3 @@ function imagettftextposition($image, $size, $angle, $x, $y, $color, $fontfile, 
 
     return 0;
 }
-
-// 関数を実行
-ogp_generator("【PHP】OGP生成プログラムを作ってみた！", '@reerishun');
