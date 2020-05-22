@@ -34,9 +34,9 @@ function ogp_generator($title,$user){
     }
 
     // title
-    imagettftextposition($image,40,0,'center','center',$color,$font,$title_lines,'center');
+    imagettftextposition($image, $jpg,40,0,'center','center',$color,$font,$title_lines,'center');
     // user
-    imagettftextposition($image,30,0,180,540,$color,$font,'@' . $user,'right','right');
+    imagettftextposition($image, $jpg,30,0,180,540,$color,$font,'@' . $user,'right','right');
 
     imagejpeg($image, $afjpg, 100);
 }
@@ -66,11 +66,10 @@ function mb_substr_size($text,$offset,$size,$encoding){
 }
 
 // 画像に文字を挿入
-function imagettftextposition($image, $size, $angle, $x, $y, $color, $fontfile, $text, $align = 'left', $offset = 'left'){
+function imagettftextposition($image, $filename, $size, $angle, $x, $y, $color, $fontfile, $text, $align = 'left', $offset = 'left'){
 
-    $jpg = 'src/ogback.jpg';
     // 画像サイズの取得
-    $image_size = getimagesize($jpg);
+    $image_size = getimagesize($filename);
 
     if($image_size){
         $image_width = $image_size[0];
