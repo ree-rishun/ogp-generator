@@ -16,3 +16,12 @@ ogp_generator("タイトル", 'ユーザーID');
     src/ogback.jpgを使用したい画像に変更する
 2. ソースを書き換える
     ogp_generator.phpの15行目の画像パスを書き換える
+
+## 詳細
+各関数はそれぞれブログにて紹介しています。
+- 【PHP】Qiita風のOGPを生成してみた。
+    - https://reerishun.com/makerblog/?p=775
+- 【PHP】画像に文字を配置を指定して書き込みをする自作関数
+    - https://reerishun.com/makerblog/?p=784
+- 【PHP】全角と半角を区別して文字列を指定文字数分切り出す
+    - https://reerishun.com/makerblog/?p=779
